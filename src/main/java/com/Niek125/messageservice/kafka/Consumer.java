@@ -1,17 +1,21 @@
 package com.Niek125.messageservice.kafka;
 
 import com.Niek125.messageservice.models.Message;
+import com.Niek125.messageservice.repository.MessageRepo;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
 @Service
 public class Consumer {
-    private final Logger logger = LoggerFactory.getLogger(Consumer.class);
-    private final ObjectMapper mapper = new ObjectMapper();
+    private Logger logger = LoggerFactory.getLogger(Consumer.class);
+    private ObjectMapper mapper = new ObjectMapper();
+    @Autowired
+    private MessageRepo messageRepo;
 
     @KafkaListener(topics = "message", groupId = "message-consumer")
     public void consume(String message) {
@@ -24,14 +28,11 @@ public class Consumer {
                     Message msg = mapper.readValue(headerPay[1], Message.class);
                     switch (header.getAction()) {
                         case CREATE:
-                            System.out.println("working header");
-                            //add to db
-                            break;
                         case UPDATE:
-                            //update db
+                            messageRepo.save(msg);
                             break;
                         case DELETE:
-                            //remove from db
+                            messageRepo.deleteById(msg.getMessageid());
                             break;
                     }
                     break;
