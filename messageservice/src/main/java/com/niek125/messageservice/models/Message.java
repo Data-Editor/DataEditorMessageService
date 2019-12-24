@@ -1,4 +1,4 @@
-package com.niek125.messageconsumer.models;
+package com.niek125.messageservice.models;
 
 import lombok.*;
 
@@ -14,8 +14,8 @@ import javax.persistence.Id;
 public class Message {
     @Id
     private String messageid;
+    private String projectid;
     private String senderid;
     private String content;
     private String sendtime;
-    private String projectid;
 }
