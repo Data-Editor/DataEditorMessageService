@@ -1,6 +1,6 @@
-package com.Niek125.messageservice.repository;
+package com.niek125.messageconsumer.repository;
 
-import com.Niek125.messageservice.models.Message;
+import com.niek125.messageconsumer.models.Message;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface MessageRepo extends JpaRepository<Message, String> {

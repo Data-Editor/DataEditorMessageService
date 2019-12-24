@@ -1,4 +1,4 @@
-package com.Niek125.messageservice.models;
+package com.niek125.messageconsumer.models;
 
 import lombok.*;
 

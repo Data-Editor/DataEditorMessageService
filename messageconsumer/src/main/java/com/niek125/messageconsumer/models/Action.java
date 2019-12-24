@@ -1,4 +1,4 @@
-package com.Niek125.messageservice.kafka;
+package com.niek125.messageconsumer.models;
 
 public enum Action {
     CREATE,

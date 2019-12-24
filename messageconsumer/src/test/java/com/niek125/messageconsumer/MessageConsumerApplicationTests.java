@@ -1,10 +1,10 @@
-package com.Niek125.messageservice;
+package com.niek125.messageconsumer;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MessageServiceApplicationTests {
+class MessageConsumerApplicationTests {
 
     @Test
     void contextLoads() {
