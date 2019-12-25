@@ -16,7 +16,7 @@ import static com.niek125.messageservice.utils.PemUtils.readPublicKeyFromFile;
 public class Config {
     @Bean
     public JWTVerifier jwtVerifier() throws IOException {
-        Algorithm algorithm = Algorithm.RSA512((RSAPublicKey) readPublicKeyFromFile("src/main/resources/PublicKey.pem", "RSA"), null);
+        Algorithm algorithm = Algorithm.RSA512((RSAPublicKey) readPublicKeyFromFile("messageservice/src/main/resources/PublicKey.pem", "RSA"), null);
         return JWT.require(algorithm).withIssuer("data-editor-token-service").build();
     }
 
