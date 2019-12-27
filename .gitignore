@@ -31,3 +31,4 @@ build/
 .vscode/
 
 messageservicekeystore.p12
+messageservice/src/main/resources/application.properties
