@@ -46,5 +46,6 @@ public class KafkaMessageConsumer {
                 messageRepo.deleteById(msg.getMessageid());
                 break;
         }
+        logger.info("successfully processed message");
     }
 }
