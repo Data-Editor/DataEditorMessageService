@@ -3,8 +3,8 @@ language: java
 jdk:
   - oraclejdk11
 script:
-  - mvn clean verify -f messageservice\pom.xml
-  - mvn clean verify -f messageconsumer\pom.xml
+  - mvn clean verify -f messageservice/pom.xml
+  - mvn clean verify -f messageconsumer/pom.xml
 
 after_success:
 after_failure:
