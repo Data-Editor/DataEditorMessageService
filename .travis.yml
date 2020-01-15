@@ -3,8 +3,12 @@ language: java
 jdk:
   - oraclejdk11
 script:
-  - mvn clean verify -f messageservice/pom.xml
-  - mvn clean verify -f messageconsumer/pom.xml
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=Niek125_DataEditorMessageService -f messageservice/pom.xml
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=Niek125_DataEditorMessageService -f messageconsumer/pom.xml
+
+addons:
+  sonarcloud:
+    organization: niek125
 
 after_success:
 after_failure:
