@@ -35,3 +35,4 @@ src/main/rescources/
 src/main/resources/PublicKey.pem
 src/main/rescources/
 /src/main/resources/application.properties
+/src/test/resources/PublicKey.pem

@@ -9,7 +9,6 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @Getter
 @Setter
-@Data
 @Entity(name = "message")
 public class Message {
     @Id
