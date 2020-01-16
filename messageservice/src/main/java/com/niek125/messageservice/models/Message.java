@@ -8,8 +8,6 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
-@Setter
-@Data
 @Entity(name = "message")
 public class Message {
     @Id

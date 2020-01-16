@@ -1,7 +1,6 @@
 package com.niek125.messageservice.controllers;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.niek125.messageservice.models.Message;
 import com.niek125.messageservice.repository.MessageRepo;
 import org.junit.jupiter.api.Test;
@@ -20,8 +19,6 @@ public class MessageControllerTests {
     private MessageController messageController;
     @Autowired
     private MessageRepo messageRepo;
-    @Autowired
-    private ObjectMapper objectMapper;
 
     @Test
     public void getMessagesTest() throws JsonProcessingException {

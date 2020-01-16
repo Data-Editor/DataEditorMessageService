@@ -9,7 +9,7 @@ addons:
 
 script:
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Pcoverage -Dsonar.projectKey=Niek125_DataEditorMessageService -Dmaven.test.failure.ignore=false -f messageservice/pom.xml
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Pcoverage -Dsonar.projectKey=Niek125_DataEditorMessageService -Dmaven.test.failure.ignore=false -f messageconsumer/pom.xml
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Pcoverage -Dsonar.projectKey=Niek125_DataEditorMessageConsumer -Dmaven.test.failure.ignore=false -f messageconsumer/pom.xml
 
 
 after_success:
